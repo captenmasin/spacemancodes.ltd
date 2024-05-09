@@ -589,8 +589,12 @@ video {
   min-height: 100%;
 }
 
-.w-56 {
-  width: 14rem;
+.w-32 {
+  width: 8rem;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .place-items-center {
@@ -680,6 +684,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:w-56 {
+    width: 14rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
