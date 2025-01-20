@@ -1,5 +1,5 @@
 <?php
-$version = '1.0.0';
+$version = '1.1.0';
 
 $websites = [
     'novogamer.com'    => 'https://icons.duckduckgo.com/ip3/novogamer.com.ico',
