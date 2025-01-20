@@ -1,5 +1,13 @@
 <?php
 $version = '1.0.0';
+
+$websites = [
+    'novogamer.com'    => 'https://icons.duckduckgo.com/ip3/novogamer.com.ico',
+    'annoyingbeep.com' => 'https://icons.duckduckgo.com/ip3/annoyingbeep.com.ico',
+    'seotoolkit.dev'   => 'https://icons.duckduckgo.com/ip3/seotoolkit.dev.ico',
+    'browser.is'       => 'https://icons.duckduckgo.com/ip3/browser.is.ico',
+    'downdetectordowndetector.com' => 'https://downdetectordowndetector.com/icon.png',
+];
 ?>
 
 <!doctype html>
@@ -35,6 +43,18 @@ $version = '1.0.0';
         <h1 class="mt-4 text-3xl font-poppins font-semibold sm:text-5xl">
             SpacemanCodes LTD
         </h1>
+        <ul class="flex items-center flex-wrap justify-center gap-2 mt-8">
+            <?php foreach ($websites as $website => $favicon): ?>
+                <li>
+                    <a href="https://<?= $website ?>" target="_blank" class="text-white bg-white/10 flex items-center gap-1.5 hover:text-primary transition-colors hover:bg-black/5 px-4 py-1.5 rounded-lg">
+                        <div class="w-6 aspect-square flex items-center bg-white justify-center p-1.5 rounded-full">
+                            <img class="w-full" width="12" height="12" alt="Favicon for <?= $website ?>" src="<?= $favicon ?>"/>
+                        </div>
+                        <span class="mt-[-2px]"><?= $website ?></span>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
     </div>
 </main>
 </body>
