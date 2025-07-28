@@ -6,7 +6,7 @@ $websites = [
     'annoyingbeep.com' => 'https://icons.duckduckgo.com/ip3/annoyingbeep.com.ico',
     'seotoolkit.dev'   => 'https://icons.duckduckgo.com/ip3/seotoolkit.dev.ico',
     'browser.is'       => 'https://icons.duckduckgo.com/ip3/browser.is.ico',
-    'downdetectordowndetector.com' => 'https://downdetectordowndetector.com/icon.png',
+    'bookbound.app' => 'https://bookbound.app/favicon.ico',
 ];
 ?>
 
