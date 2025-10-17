@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/vite.php';
+?>
 <!doctype html>
 <html lang="en" class="h-full">
 
@@ -5,7 +8,9 @@
   <meta charset="utf-8">
   <title>Page Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/app.css?v=<?= time() ?>">
+  <?php foreach (vite_css('src/main.js') as $css): ?>
+    <link rel="stylesheet" href="<?= $css ?>">
+  <?php endforeach; ?>
 </head>
 
 <body class="bg-black text-white h-full">
@@ -16,6 +21,10 @@
         <p class="mt-4 text-base leading-7 text-white/75">Sorry, we couldn’t find the page you’re looking for.</p>
     </div>
 </main>
+<?php if ($client = vite_client()): ?>
+  <script type="module" src="<?= $client ?>"></script>
+<?php endif; ?>
+<script type="module" src="<?= vite_asset('src/main.js') ?>"></script>
 </body>
 
 </html>

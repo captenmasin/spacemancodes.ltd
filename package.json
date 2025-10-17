@@ -1,24 +1,27 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
+  "name": "spacemancodes-ltd",
+  "version": "0.1.0",
+  "description": "SpacemanCodes LTD marketing site assets",
   "private": true,
-  "keywords": [
-    ""
-  ],
-  "license": "",
-  "author": "",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/css/app.css -o ./css/app.css --watch",
-    "build": "npx tailwindcss -i ./src/css/app.css -o ./css/app.css --minify"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.546.0",
+    "motion-v": "^1.7.2",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "^3.5.22"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^11.0.0",
-    "html-webpack-plugin": "^5.5.3",
-    "tailwindcss": "^3.4.3",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
-    "webpack-merge": "^5.9.0"
+    "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.10"
   }
 }

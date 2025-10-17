@@ -6,8 +6,16 @@ $websites = [
     'annoyingbeep.com' => 'https://icons.duckduckgo.com/ip3/annoyingbeep.com.ico',
     'seotoolkit.dev'   => 'https://icons.duckduckgo.com/ip3/seotoolkit.dev.ico',
     'browser.is'       => 'https://icons.duckduckgo.com/ip3/browser.is.ico',
-    'bookbound.app' => 'https://bookbound.app/favicon.ico',
+    'bookbound.app'    => 'https://bookbound.app/favicon.ico',
 ];
+
+require_once __DIR__ . '/vite.php';
+
+$websitesJson = htmlspecialchars(
+    json_encode($websites, JSON_UNESCAPED_SLASHES) ?: '{}',
+    ENT_QUOTES,
+    'UTF-8'
+);
 ?>
 
 <!doctype html>
@@ -17,7 +25,6 @@ $websites = [
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SpacemanCodes LTD</title>
-    <link rel="stylesheet" href="css/app.css?v=<?= $version ?>">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600|poppins:600,600i,700,700i" rel="stylesheet"/>
 
@@ -34,31 +41,22 @@ $websites = [
 
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#000000">
+    <?php foreach (vite_css('src/main.js') as $css): ?>
+        <link rel="stylesheet" href="<?= $css ?>">
+    <?php endforeach; ?>
 </head>
 
 <body class="bg-black text-white h-full bg-cover bg-center lazy-background">
-<main class="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
-    <div class="text-center">
-        <img src="icon.svg?v=<?= $version ?>" alt="SpacemanCodes LTD" class="w-28 lg:w-56 mx-auto mb-4">
-        <h1 class="mt-4 text-3xl font-poppins font-semibold sm:text-5xl">
-            SpacemanCodes LTD
-        </h1>
-        <ul class="flex items-center flex-wrap justify-center gap-2 mt-8">
-            <?php foreach ($websites as $website => $favicon): ?>
-                <li>
-                    <a href="https://<?= $website ?>" target="_blank" class="text-white bg-white/10 flex items-center gap-1.5 hover:text-primary transition-colors hover:bg-black/5 px-4 py-1.5 rounded-lg">
-                        <div class="w-6 aspect-square flex items-center bg-white justify-center p-1.5 rounded-full">
-                            <img class="w-full" width="12" height="12" alt="Favicon for <?= $website ?>" src="<?= $favicon ?>"/>
-                        </div>
-                        <span class="mt-[-2px]"><?= $website ?></span>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-</main>
-</body>
+<div
+    id="app"
+    data-version="<?= htmlspecialchars($version, ENT_QUOTES, 'UTF-8') ?>"
+    data-websites='<?= $websitesJson ?>'
+></div>
+<?php if ($client = vite_client()): ?>
+    <script type="module" src="<?= $client ?>"></script>
+<?php endif; ?>
+<script type="module" src="<?= vite_asset('src/main.js') ?>"></script>
 
-<script src="js/app.js?v=<?= $version ?>"></script>
+</body>
 
 </html>
