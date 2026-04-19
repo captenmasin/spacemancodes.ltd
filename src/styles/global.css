@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #08090f;
+  color: #dde0ec;
+}
+
+::selection {
+    @apply text-white;
+    background-color:rgba(255,255,255,0.5);
+}
+
+::-moz-selection {
+    @apply text-white;
+    background-color:rgba(255,255,255,0.5);
+}
