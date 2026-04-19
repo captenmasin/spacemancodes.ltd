@@ -27,7 +27,7 @@ const products = [
                disable-rotation={true}
     />
     <div class="relative z-10 flex md:h-screen flex-col justify-between px-8 md:px-15 pt-13">
-        <div class="font-mono text-[11px] tracking-[0.12em] text-[#2e3148]">
+        <div class="font-mono text-[11px] tracking-[0.12em] text-white/40">
             SPACEMANCODES.LTD
         </div>
         <div class:list={'py-12 md:py-2 mt-4 '}>
@@ -59,10 +59,10 @@ const products = [
                                 class="mb-3 h-2 w-2 rounded-full md:opacity-40 transition-opacity duration-150 group-hover:opacity-100"
                                 style={`background:${p.color}`}
                         ></div>
-                        <div class="mb-1 text-[13px] font-medium text-[#edf0fa] md:text-[#5a607e] transition-colors duration-150 group-hover:text-[#edf0fa]">
-                            {p.domain} {p.comingSoon && <span class="text-[11px] font-normal text-[#edf0fa]/50 transition-colors duration-150 md:text-[#2e3148] group-hover:text-[#edf0fa]">coming soon</span> }
+                        <div class="mb-1 text-[13px] font-medium text-[#edf0fa] md:text-white/40 transition-colors duration-150 group-hover:text-[#edf0fa]">
+                            {p.domain} {p.comingSoon && <span class="text-[11px] font-normal text-[#edf0fa]/40 transition-colors duration-150 md:text-[#2e3148] group-hover:text-[#edf0fa]">coming soon</span> }
                         </div>
-                        <div class="font-mono text-[11px] text-[#edf0fa]/50 md:text-[#2e3148] transition-colors duration-150 group-hover:text-[#edf0fa]">
+                        <div class="font-mono text-[11px] text-[#edf0fa]/50 md:text-white/40 transition-colors duration-150 group-hover:text-[#edf0fa]">
                             {p.tagline}
                         </div>
                     </a>
