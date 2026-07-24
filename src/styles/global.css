@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 html,
@@ -12,16 +12,20 @@ body {
 
 body {
   font-family: var(--font-sans);
-  background: #08090f;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, #12151f 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, #0a0c14 0%, transparent 45%),
+    #06070c;
   color: #dde0ec;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-    @apply text-white;
-    background-color:rgba(255,255,255,0.5);
+  color: #06070c;
+  background-color: rgba(232, 235, 244, 0.85);
 }
 
 ::-moz-selection {
-    @apply text-white;
-    background-color:rgba(255,255,255,0.5);
+  color: #06070c;
+  background-color: rgba(232, 235, 244, 0.85);
 }

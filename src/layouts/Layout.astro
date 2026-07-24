@@ -1,9 +1,15 @@
 ---
 import "../styles/global.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "SpacemanCodes LTD" } = Astro.props;
 ---
 
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
@@ -12,22 +18,25 @@ import "../styles/global.css";
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-    <meta name="description" content="SpacemanCodes LTD">
+    <meta name="description" content="SpacemanCodes LTD — we build things." />
 
-    <meta property="og:title" content="SpacemanCodes LTD">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://spacemancodes.ltd">
-    <meta property="og:image" content="https://spacemancodes.ltd/img/og.png">
+    <meta property="og:title" content="SpacemanCodes LTD" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://spacemancodes.ltd" />
+    <meta property="og:image" content="https://spacemancodes.ltd/img/og.png" />
 
-    <link rel="icon" href="/favicon.ico?v=1.1.0" sizes="any">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" href="/favicon.ico?v=1.1.0" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.png" />
 
-    <title>SpacemanCodes LTD</title>
-</head>
-<body class:list={'bg-linear-to-tr from-[#08090f] to-[#17191f] '}>
-<slot />
-</body>
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
