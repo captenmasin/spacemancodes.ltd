@@ -23,8 +23,10 @@ const { name, domain, description, icon, index } = Astro.props;
     <Image
       src={icon}
       alt=""
-      width="64"
-      height="64"
+      width={64}
+      height={64}
+      densities={[2]}
+      layout="fixed"
       class="size-full object-cover"
     />
   </span>
