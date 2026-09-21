@@ -1,15 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Mark from "../components/Mark.astro";
 ---
 
-<Layout title="404">
-    <div class="min-h-screen">
-        <div class="flex flex-col items-center justify-center h-screen">
-            <h1 class="text-6xl font-bold mb-0">404</h1>
-            <p class="text-lg">Page not found</p>
-            <a href="/" class="text-sm border border-white rounded-full transition-all px-6 hover:bg-white hover:text-[#2e3148] py-1.5 mt-6">
-                Go home
-            </a>
-        </div>
-    </div>
+<Layout title="404 · SpacemanCodes">
+  <main
+    class="relative flex min-h-dvh flex-col items-center justify-center bg-hero px-6 text-center text-cream"
+  >
+    <Mark class="mb-8 w-16 text-cream sm:w-20" />
+    <h1
+      class="font-sans text-[clamp(4.5rem,16vw,9rem)] font-semibold leading-none tracking-[-0.05em]"
+    >
+      404
+    </h1>
+    <p class="mt-4 text-[15px] text-cream/70">Page not found.</p>
+    <a
+      href="/"
+      class="mt-8 rounded-full border border-cream/40 px-6 py-2 text-sm tracking-[-0.02em] text-cream no-underline transition-colors duration-200 hover:bg-cream hover:text-vermilion"
+    >
+      Go home
+    </a>
+  </main>
 </Layout>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none" role="img" aria-labelledby="title">
+<title id="title">SpacemanCodes Codecraft</title>
+<g fill="#FCF8F1">
+<path id="dome" d="M155 154 A89 89 0 0 1 325 154 Q240 141 155 154 Z"/>
+<path id="saucer" d="M240 156 C334 156 411 177 411 205 C411 232 349 250 270 254 L264 237 C298 235 320 224 320 220 C320 210 284 202 240 202 C196 202 160 210 160 220 C160 224 183 235 216 237 L210 254 C131 250 69 232 69 205 C69 177 146 156 240 156 Z"/>
+<path id="cursor-beam" d="M243 208 L293 337 Q297 346 288 344 L256 327 Q251 324 251 330 L258 381 Q260 392 251 387 L189 343 Q185 340 188 333 L236 209 Q239 202 243 208 Z"/>
+</g>
+</svg>
